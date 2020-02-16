@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from "react-dom";
-import './App.scss';
+import './Index.scss';
 
-export default class App extends React.Component {
+export default class Index extends React.Component {
     render(){
         return(
             <div>
@@ -13,4 +13,4 @@ export default class App extends React.Component {
     }
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<Index />, document.getElementById("root"));
