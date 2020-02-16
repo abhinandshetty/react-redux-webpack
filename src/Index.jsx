@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 import './Index.scss';
+import  Routes   from './Routes';
 
 export default class Index extends React.Component {
     render(){
         return(
-            <div>
-            <h1>Hi</h1>
-
-            </div>
+            
+                <Routes />
+            
         )
     }
 }

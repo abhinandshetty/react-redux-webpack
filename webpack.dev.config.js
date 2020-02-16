@@ -6,6 +6,9 @@ module.exports = {
         filename: 'bundle.js'
     },
     devtool: 'eval-cheap-module-source-map',
+    resolve: {
+      extensions: [".jsx", ".js","scss"]
+    },
     module: {
         rules: [
             {
