@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+    mode: "development",
     entry : "./src/Index.jsx",
     output: {
         filename: 'bundle.js'
@@ -30,7 +31,7 @@ module.exports = {
               ]
             },
             {
-              test: /\.s[ac]ss$/i,
+              test: /\.(s[ac]ss|css)$/i,
               use: [
                 'style-loader',
                 'css-loader',

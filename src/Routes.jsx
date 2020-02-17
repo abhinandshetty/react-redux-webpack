@@ -7,8 +7,6 @@ export default function Routes () {
         <Router>
             <Switch>
                 <Route  path="/users" exact component={UserGrid} />
-                   
-
                 <Redirect exact from="/" to="users" />
             </Switch>
         </Router>
