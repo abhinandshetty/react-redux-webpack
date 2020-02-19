@@ -12,20 +12,107 @@ export default class UserGrid extends Component {
             {
                 columnHeader: "Age",
                 key: "age"
+            }, 
+            {
+                columnHeader: "Department",
+                key: "department"
+            }, 
+            {
+                columnHeader: "Skills",
+                key: "skills"
             }
         ],
         dataRows : [
             {
                 name: "Abhinand",
-                age: "26"
+                age: "26",
+                department: "Software Development",
+                skills: ["Javascript", "Java", "Python"]
             },
             {
                 name: "George",
-                age: "42"
+                age: "42",
+                department: "Software Development",
+                skills: ["Javascript", "Java", "Python"]
+                
             },
             {
                 name: "Steve",
-                age: "20"
+                age: "20",
+                department: "Software Development",
+                skills: ["Javascript", "Java", "Python"]
+            },
+            {
+                name: "Abhinand",
+                age: "26",
+                department: "Software Development",
+                skills: ["Javascript", "Java", "Python"]
+            },
+            {
+                name: "George",
+                age: "42",
+                department: "Software Development",
+                skills: ["Javascript", "Java", "Python"]
+            },
+            {
+                name: "Steve",
+                age: "20",
+                department: "Software Development",
+                skills: ["Javascript", "Java", "Python"]
+            },
+            {
+                name: "Abhinand",
+                age: "26",
+                department: "Software Development",
+                skills: ["Javascript", "Java", "Python"]
+            },
+            {
+                name: "George",
+                age: "42",
+                department: "Software Development",
+                skills: ["Javascript", "Java", "Python"]
+            },
+            {
+                name: "Steve",
+                age: "20",
+                department: "Software Development",
+                skills: ["Javascript", "Java", "Python"]
+            },
+            {
+                name: "Abhinand",
+                age: "26",
+                department: "Software Development",
+                skills: ["Javascript", "Java", "Python"]
+            },
+            {
+                name: "George",
+                age: "42",
+                department: "Software Development",
+                skills: ["Javascript", "Java", "Python"]
+            },
+            {
+                name: "Steve",
+                age: "20",
+                department: "Software Development",
+                skills: ["Javascript", "Java", "Python"]
+            },
+            {
+                name: "Abhinand",
+                age: "26",
+                department: "Software Development",
+                skills: ["Javascript", "Java", "Python"]
+            },
+            {
+                name: "George",
+                age: "42",
+                department: "Software Development",
+                skills: ["Javascript", "Java", "Python"]
+            },
+            {
+                name: "Steve",
+                age: "20",
+                department: "Software Development",
+                skills: ["Javascript", "Java", "Python"]
             }
         ]
     }
