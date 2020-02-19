@@ -1,8 +1,31 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
 
-$body-color: yellow;
+$bg-gradient-start-color: #734b6d;
+$bg-gradient-end-color: #42275a;
+$bg-table-header-color: #42213c;
+$bg-table-text-color: aliceblue;
+
 
 body {
-  background-color: $body-color;
+  background: $bg-gradient-end-color;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, $bg-gradient-start-color, $bg-gradient-end-color);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, $bg-gradient-start-color, $bg-gradient-end-color); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+table {
+  background: white;
+  -webkit-box-shadow: 0px 2px 12px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 12px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 12px -2px rgba(0,0,0,0.75);
+}
+
+thead {
+  background : $bg-table-header-color;
+  color:$bg-table-text-color;
+  tr {
+    th {
+      border: none !important;
+    }
+  }
 }

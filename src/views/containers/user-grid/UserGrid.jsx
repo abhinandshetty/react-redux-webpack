@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Table from '../../components/Table';
+import Loader from '../../components/Loader';
 
 export default class UserGrid extends Component {
     state = {
@@ -32,6 +33,7 @@ export default class UserGrid extends Component {
     render() {
         const {headers, dataRows} = this.state;
         return (
+            // <Loader />
             <Table headers={headers} rows={dataRows} isSortable={false} isSelectable={false}/>
         )
     }

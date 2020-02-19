@@ -3,15 +3,11 @@ import TableRow from './TableRow';
 import TableHeader from './TableHeader';
 
 export default class Table extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render () {
         const {headers, rows} = this.props;
         return (
-            <div className="container">
-                <table className="table">
+            <div className="container mt-5">
+                <table className="table table-striped">
                     <TableHeader headers={headers} />  
                     <TableRow rows={rows} />
                 </table>

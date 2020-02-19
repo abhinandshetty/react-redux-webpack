@@ -1,13 +1,13 @@
 import React from 'react';
 
-const TableHeader = ({headers, isSortable}) => {
+const TableHeader = ({headers}) => {
 
     const renderHeaders = () => (headers.map((header,index) => (
-        <th key={index}>{header.columnHeader}</th>
+        <th key={index}>{header.columnHeader}{header.isSortable? <i className="fa fa-sort-up"></i> : null}</th>
     )));
 
     return (
-        <thead className="thead-light">
+        <thead>
             <tr>
                 {renderHeaders()}
             </tr>
