@@ -2,7 +2,7 @@ import React from 'react';
 
 const  TableRow = ({rows}) => {
 
-    const renderRows = () => (rows && rows.length ? rows.map((row, index) => (
+    const renderRows = () => (false && rows.length ? rows.map((row, index) => (
         <tr key={index}>
             {
                 Object.keys(row).map((entry, i) => (

@@ -30,6 +30,7 @@
     "jquery": "^3.4.1",
     "node-sass": "^4.13.1",
     "react-bootstrap": "^1.0.0-beta.16",
+    "react-burger-menu": "^2.6.13",
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.5",
     "sass-loader": "^8.0.2",
