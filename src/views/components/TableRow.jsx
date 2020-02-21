@@ -3,7 +3,7 @@ import React from 'react';
 const  TableRow = ({rows}) => {
 
     const renderRows = () => (rows && rows.length ? rows.map((row, index) => (
-        <tr key={index}>
+        <tr>
             {
                 Object.keys(row).map((entry, i) => (
                     <td key={i}>
@@ -16,7 +16,6 @@ const  TableRow = ({rows}) => {
     )): <tr>
             <td>
                 <p>No record found</p>
-                <button className="btn btn-success">Add user</button>
             </td>
         </tr>);
     

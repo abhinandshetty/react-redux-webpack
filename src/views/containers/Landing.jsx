@@ -7,8 +7,9 @@ import UserGrid from './user-grid/UserGrid';
 const  Landing = ({children}) => {
     return (
         <div>
-        <Sidebar />
-        <Route  path="/users" exact component={UserGrid} />        </div>
+            <Sidebar />
+            <UserGrid />
+        </div>
     )
 }
 

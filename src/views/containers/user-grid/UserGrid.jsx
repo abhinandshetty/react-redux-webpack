@@ -1,50 +1,31 @@
 import React, { Component } from 'react';
 import Table from '../../components/Table';
-import { addUser, getUsers } from '../../../redux/user/user'
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
+import { getUsers } from '../../../redux/user/user';
+import { getUserGridColumns } from '../../../redux/table/table';
 
 class UserGrid extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            headers : [
-                {
-                    columnHeader: "Name",
-                    key: "name"
-                }, 
-                {
-                    columnHeader: "Age",
-                    key: "age"
-                }, 
-                {
-                    columnHeader: "Department",
-                    key: "department"
-                }, 
-                {
-                    columnHeader: "Skills",
-                    key: "skills"
-                }
-            ]
-        }
-    }
 
     componentDidMount(){
         this.props.getUsers();
+        this.props.getUserGridColumns();
     }
 
     render() {
-        const {headers} = this.state;
-        const {userList} = this.props;
+        const {userList , columns} = this.props;
         return (
-            <Table headers={headers} rows={userList} isSortable={false} isSelectable={false}/>
+            <div className="container mt-5"> 
+                <button className="btn btn-success float-right mb-3">Add User</button>
+                <Table headers={columns} rows={userList}/>
+            </div>
         )
     }
 }
 
 
 const mapStateToProps = state => ({
-    userList : state.users.userList
+    userList : state.users.userList,
+    columns: state.tables.userGridColumns
 });
-export default connect(mapStateToProps,{ addUser, getUsers })(UserGrid);
+export default connect(mapStateToProps,{ getUsers, getUserGridColumns })(UserGrid);
 

@@ -1,15 +1,19 @@
 import React from 'react';
 
-const TableHeader = ({headers}) => {
+const TableHeader = ({headers, isActionRequired}) => {
 
     const renderHeaders = () => (headers.map((header,index) => (
-        <th key={index}>{header.columnHeader}{header.isSortable? <i className="fa fa-sort-up"></i> : null}</th>
+        <th>
+            {header.columnHeader}
+            {header.isSortable? <i className="fa fa-sort-up"></i> : null}
+        </th>
     )));
 
     return (
         <thead>
             <tr>
-                {renderHeaders()}
+                { renderHeaders() }
+                { isActionRequired ? <th></th> : null}
             </tr>
        </thead>
     )
