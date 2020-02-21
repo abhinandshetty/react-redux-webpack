@@ -1,126 +1,50 @@
 import React, { Component } from 'react';
 import Table from '../../components/Table';
+import { addUser, getUsers } from '../../../redux/user/user'
+import {connect} from 'react-redux';
 
-export default class UserGrid extends Component {
-    state = {
-        headers : [
-            {
-                columnHeader: "Name",
-                key: "name"
-            }, 
-            {
-                columnHeader: "Age",
-                key: "age"
-            }, 
-            {
-                columnHeader: "Department",
-                key: "department"
-            }, 
-            {
-                columnHeader: "Skills",
-                key: "skills"
-            }
-        ],
-        dataRows : [
-            {
-                name: "Abhinand",
-                age: "26",
-                department: "Software Development",
-                skills: ["Javascript", "Java", "Python"]
-            },
-            {
-                name: "George",
-                age: "42",
-                department: "Software Development",
-                skills: ["Javascript", "Java", "Python"]
-                
-            },
-            {
-                name: "Steve",
-                age: "20",
-                department: "Software Development",
-                skills: ["Javascript", "Java", "Python"]
-            },
-            {
-                name: "Abhinand",
-                age: "26",
-                department: "Software Development",
-                skills: ["Javascript", "Java", "Python"]
-            },
-            {
-                name: "George",
-                age: "42",
-                department: "Software Development",
-                skills: ["Javascript", "Java", "Python"]
-            },
-            {
-                name: "Steve",
-                age: "20",
-                department: "Software Development",
-                skills: ["Javascript", "Java", "Python"]
-            },
-            {
-                name: "Abhinand",
-                age: "26",
-                department: "Software Development",
-                skills: ["Javascript", "Java", "Python"]
-            },
-            {
-                name: "George",
-                age: "42",
-                department: "Software Development",
-                skills: ["Javascript", "Java", "Python"]
-            },
-            {
-                name: "Steve",
-                age: "20",
-                department: "Software Development",
-                skills: ["Javascript", "Java", "Python"]
-            },
-            {
-                name: "Abhinand",
-                age: "26",
-                department: "Software Development",
-                skills: ["Javascript", "Java", "Python"]
-            },
-            {
-                name: "George",
-                age: "42",
-                department: "Software Development",
-                skills: ["Javascript", "Java", "Python"]
-            },
-            {
-                name: "Steve",
-                age: "20",
-                department: "Software Development",
-                skills: ["Javascript", "Java", "Python"]
-            },
-            {
-                name: "Abhinand",
-                age: "26",
-                department: "Software Development",
-                skills: ["Javascript", "Java", "Python"]
-            },
-            {
-                name: "George",
-                age: "42",
-                department: "Software Development",
-                skills: ["Javascript", "Java", "Python"]
-            },
-            {
-                name: "Steve",
-                age: "20",
-                department: "Software Development",
-                skills: ["Javascript", "Java", "Python"]
-            }
-        ]
+class UserGrid extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            headers : [
+                {
+                    columnHeader: "Name",
+                    key: "name"
+                }, 
+                {
+                    columnHeader: "Age",
+                    key: "age"
+                }, 
+                {
+                    columnHeader: "Department",
+                    key: "department"
+                }, 
+                {
+                    columnHeader: "Skills",
+                    key: "skills"
+                }
+            ]
+        }
+    }
+
+    componentDidMount(){
+        this.props.getUsers();
     }
 
     render() {
-        const {headers, dataRows} = this.state;
+        const {headers} = this.state;
+        const {userList} = this.props;
         return (
-            // <Loader />
-            <Table headers={headers} rows={dataRows} isSortable={false} isSelectable={false}/>
+            <Table headers={headers} rows={userList} isSortable={false} isSelectable={false}/>
         )
     }
 }
+
+
+const mapStateToProps = state => ({
+    userList : state.users.userList
+});
+export default connect(mapStateToProps,{ addUser, getUsers })(UserGrid);
+
