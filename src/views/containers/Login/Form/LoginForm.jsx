@@ -1,8 +1,7 @@
 import React from 'react';
-import { addUser } from '../../../redux/user/user'
+import { addUser } from '../../../../redux/user/user'
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import { throws } from 'assert';
 
 class Login extends React.Component {
     constructor(props){

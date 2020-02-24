@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link, Route } from "react-router-dom";
 import Sidebar from '../components/Sidebar';
-import UserGrid from './user-grid/UserGrid';
-
+import UserGrid from './Users/List/UserList';
 
 const  Landing = ({children}) => {
     return (

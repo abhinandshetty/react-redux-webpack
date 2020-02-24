@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Redirect, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect} from "react-router-dom";
 import Landing from './views/containers/Landing';
-import Login from './views/containers/login/Login'
+import Login from './views/containers/Login/Form/LoginForm'
 
 export default function Routes () {
     return (
