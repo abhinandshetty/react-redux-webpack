@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TableHeader = ({headers, isActionRequired}) => {
+const TableHeader = ({headers, isActionRequired=false}) => {
 
     const renderHeaders = () => (headers.map((header,index) => (
         <th>

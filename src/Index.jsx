@@ -6,6 +6,7 @@ import store from './redux/store';
 
 import './Index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { ToastProvider } from 'react-toast-notifications'
 
 
 
@@ -13,7 +14,9 @@ export default class Index extends React.Component {
     render(){
         return(
             <Provider store={store}>
-                <Routes />
+                <ToastProvider>
+                    <Routes />
+                </ToastProvider>
             </Provider>
         );
     }

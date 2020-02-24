@@ -8,7 +8,7 @@ export default class Table extends Component {
         return (
                 <table className="table table-striped">
                     <TableHeader headers={headers} isActionRequired={true}/>  
-                    <TableRow rows={rows} />
+                    <TableRow rows={rows} isActionRequired={true}/>
                 </table>
             
         )

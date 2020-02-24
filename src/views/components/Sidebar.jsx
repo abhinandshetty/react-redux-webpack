@@ -1,5 +1,6 @@
 import React from 'react';
-import { bubble as Menu } from 'react-burger-menu'
+import { bubble as Menu } from 'react-burger-menu';
+import { Link } from 'react-router-dom';
 
 export default class Sidebar extends React.Component {
  
@@ -8,12 +9,11 @@ export default class Sidebar extends React.Component {
         <div style={{height:1}}>
             <Menu >
               <li>
-                hi
+                <Link to="/login">Login</Link>
               </li>
               <li>
-hello              </li>
-              <li>
-welcom              </li>
+                <Link to="/users">Users</Link>
+              </li>
             </Menu>
         </div>
       

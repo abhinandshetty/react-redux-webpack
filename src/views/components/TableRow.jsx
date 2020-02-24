@@ -1,6 +1,6 @@
 import React from 'react';
 
-const  TableRow = ({rows}) => {
+const  TableRow = ({rows, isActionRequired=false}) => {
 
     const renderRows = () => (rows && rows.length ? rows.map((row, index) => (
         <tr>
@@ -12,6 +12,7 @@ const  TableRow = ({rows}) => {
                     )
                 )
             }
+            { isActionRequired ? <td></td> : null }
         </tr>
     )): <tr>
             <td>

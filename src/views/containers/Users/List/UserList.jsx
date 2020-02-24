@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Table from '../../../components/Table';
+import MyModal  from '../../../components/Modal';
+import AddUserForm from '../Form/AddUserForm';
+
 import { connect } from 'react-redux';
 import { getUsers } from '../../../../redux/user/user';
 import { getUserGridColumns } from '../../../../redux/table/table';
-import MyModal  from '../../../components/Modal';
 import { Button } from 'react-bootstrap';
 
 class UserGrid extends Component {
@@ -25,7 +27,7 @@ class UserGrid extends Component {
         });
     }
 
-    onOpen = () => {
+    openAddUserModal = () => {
         this.setState(()=>{
             return {...this.state, isOpen : true}
         });
@@ -34,11 +36,12 @@ class UserGrid extends Component {
     render() {
         const {userList , columns} = this.props;
         return (
+            
             <div className="container mt-5"> 
-                <Button className="btn btn-success float-right mb-3">Add User</Button>
+                <Button className="btn btn-success float-right mb-3" onClick={this.openAddUserModal}>Add User</Button>
                 <Table headers={columns} rows={userList}/>
                 <MyModal isOpen={this.state.isOpen} onCloseModal={this.onClose}>
-                    
+                    <AddUserForm/>
                 </MyModal>
             </div>
         )

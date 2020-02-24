@@ -4,8 +4,8 @@
   "description": "A practice project for setting up react and redux with webpack.",
   "main": "index.js",
   "scripts": {
-    "build:prod": "webpack --config webpack.prod.config.js",
-    "build:dev": "webpack --config webpack.dev.config.js",
+    "build:prod": "webpack --config webpack.prod.config.js --output dist",
+    "build:dev": "webpack --config webpack.dev.config.js --output dist",
     "start:dev": "webpack-dev-server --config webpack.dev.config.js"
   },
   "author": "abhinand",
@@ -34,6 +34,7 @@
     "react-burger-menu": "^2.6.13",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
+    "react-toast-notifications": "^2.4.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^8.0.2",

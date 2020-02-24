@@ -16,7 +16,6 @@ class Login extends React.Component {
         return (
             <div>
                 <button onClick={this.createUser}>Create User</button>
-                {this.props.userList}
                 <Link to="/users">Go to users</Link>
             </div>
         )
