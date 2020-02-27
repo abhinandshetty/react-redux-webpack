@@ -25,11 +25,12 @@ export const loginUser = (user) => dispatch => {
   });
 };
 
-export const addUser = (user) => dispatch => {
+export const addUser = (user, callback = () => {}) => dispatch => {
     dispatch({
         type: ADD_USER,
         payload: user
     });
+    callback();
 };
 
 

@@ -6,9 +6,9 @@ import Login from './views/containers/Login/Form/LoginForm'
 export default function Routes () {
     return (
         <Router>
-            <Route  path="/login" exact component={Login} />
-            <Route  path="/users" exact component={Landing} />
-            <Redirect from="" exact to="/users" />
+            <Route path="/login" exact component={Login} />
+            <Route path="/users" exact component={Landing} />
+            <Redirect from="/" exact to="/users" />
 
             {/* <Redirect from="" to="/login" /> */}
 

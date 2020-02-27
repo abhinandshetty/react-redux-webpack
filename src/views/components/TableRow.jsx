@@ -2,7 +2,7 @@ import React from 'react';
 
 const  TableRow = ({rows, isActionRequired=false}) => {
 
-    const renderRows = () => (rows && rows.length ? rows.map((row, index) => (
+    const renderRows = () => (rows && rows.length ? rows.map(row => (
         <tr>
             {
                 Object.keys(row).map((entry, i) => (
@@ -14,7 +14,7 @@ const  TableRow = ({rows, isActionRequired=false}) => {
             }
             { isActionRequired ? <td></td> : null }
         </tr>
-    )): <tr>
+        )): <tr className="m-auto">
             <td>
                 <p>No record found</p>
             </td>

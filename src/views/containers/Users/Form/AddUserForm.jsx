@@ -1,48 +1,28 @@
 import React from 'react';
+import FormRow from '../../../components/Form/FormRow';
 
-const AddUserForm = () => {
+const AddUserForm = ({onChangeFields = () => {}}) => {
+
+    const userFormFields = [
+        {fieldName: "Name", fieldType:"text", fieldId:"name" , placeholder:"Abhinand Shetty"},
+        {fieldName: "Age", fieldType:"text", fieldId:"age" , placeholder:"26"},
+        {fieldName: "Skills", fieldType:"text", fieldId:"skills" , placeholder:"React, Node"},
+        {fieldName: "Designation", fieldType:"text", fieldId:"designation" , placeholder:"Software Developer"},
+        {fieldName: "Company", fieldType:"text", fieldId:"company" , placeholder:"Microsoft"}
+    ];
+
+    const renderFormFields = () => userFormFields.map(row => (
+        <FormRow 
+            fieldName={row.fieldName} 
+            fieldType={row.fieldType} 
+            fieldId={row.fieldId}  
+            placeholder={row.placeholder} 
+            onChangeInput={onChangeFields} />
+    ));
+
     return (
-
         <form className="form-group"> 
-
-            <div className="row form-group">
-                <div className="col-lg-3">
-                    <label htmlFor="name">Name</label>
-                </div>
-                <div className="col-lg-9">
-                    <input type="text" className="form-control" id="name" placeholder="e.g. Lionel Messi"/>
-                </div>
-            </div>
-
-
-            <div className="row form-group">
-                <div className="col-lg-3">
-                    <label htmlFor="age">Age</label>
-                </div>
-                <div className="col-lg-9">
-                    <input type="text" className="form-control" id="age" placeholder="e.g. 26"/>
-                </div>
-            </div>
-
-            
-            <div className="row form-group">
-                <div className="col-lg-3">
-                    <label htmlFor="skills">Skills</label>
-                </div>
-                <div className="col-lg-9">
-                    <input type="text" className="form-control" id="skills" placeholder="e.g. Java, React"/>
-                </div>
-            </div>
-
-            <div className="row form-group">
-                <div className="col-lg-3">
-                    <label htmlFor="department">Department</label>
-                </div>
-                <div className="col-lg-9">
-                    <input type="text" className="form-control" id="department" placeholder="e.g. Microsoft"/>
-                </div>
-            </div>
-
+            {renderFormFields()}
         </form>
     )
 }

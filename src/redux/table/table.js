@@ -13,12 +13,16 @@ const initialState = {
             key: "age"
         }, 
         {
-            columnHeader: "Department",
-            key: "department"
-        }, 
-        {
             columnHeader: "Skills",
             key: "skills"
+        },
+        {
+            columnHeader: "Designation",
+            key: "designation"
+        }, 
+        {
+            columnHeader: "Company",
+            key: "company"
         }
     ]
 }
