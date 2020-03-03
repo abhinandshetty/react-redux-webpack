@@ -13,7 +13,11 @@ const TableRow = ({rows, onDelete=()=>{}}) => {
                     )
                 )
             }
-            <td><i className="fa fa-trash hand-pointer" onClick={()=>onDelete(row.id)}></i></td>
+            <td>
+                <i className="fa fa-lg fa-pencil hand-pointer icon" onClick={()=>onDelete(row.id)}></i>
+                
+                <i className="fa fa-lg fa-trash hand-pointer icon " onClick={()=>onDelete(row.id)}></i>
+            </td>
         </tr>
         )): <tr className="m-auto">
             <td>

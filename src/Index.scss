@@ -141,3 +141,11 @@ button.btn {
     cursor: pointer;
   }
 }
+
+.icon {
+  margin-right: 1rem;
+  &:hover{
+    transform: scale(1.2);
+    transition-duration: 400ms;
+  }
+}

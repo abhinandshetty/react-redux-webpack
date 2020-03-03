@@ -4,10 +4,10 @@ import TableHeader from './TableHeader';
 
 export default class Table extends Component {
     render () {
-        const {headers, rows, onClickDeleteUser} = this.props;
+        const {headers, rows, onClickDeleteUser, isActionRequired} = this.props;
         return (
                 <table className="table table-striped">
-                    <TableHeader headers={headers}/>  
+                    <TableHeader headers={headers} isActionRequired={isActionRequired}/>  
                     <TableRow rows={rows} onDelete={onClickDeleteUser}/>
                 </table>    
         )
