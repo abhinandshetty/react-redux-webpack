@@ -42,7 +42,7 @@ class UserGrid extends Component {
         const { userList, columns } = this.props;
 
         return (
-            <div className="container mt-5 col-lg-9 col-md-9 col-sm-9 col-xs-9"> 
+            <div className="container mt-5 col-lg-9 col-md-9 col-sm-12 col-xs-12"> 
                 <Button className="btn btn-success float-right mb-3" onClick={this.openAddUserModal}>Add User</Button>
                 <Button variant="secondary" className="float-right mb-3 mr-3" onClick={this.onClickLoadSampleData}>Load Sample Data</Button>
                 
