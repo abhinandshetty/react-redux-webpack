@@ -1,18 +1,19 @@
 import React from 'react';
 
-const  TableRow = ({rows, isActionRequired=false}) => {
+const TableRow = ({rows, onDelete=()=>{}}) => {
 
     const renderRows = () => (rows && rows.length ? rows.map(row => (
-        <tr>
+        <tr key={row.id ? row.id : ''}>
             {
                 Object.keys(row).map((entry, i) => (
+                    entry !== 'id' && 
                     <td key={i}>
-                        { Array.isArray(row[entry]) ?  row[entry].join(", ") : row[entry] }
+                        { Array.isArray(row[entry]) ? row[entry].join(", ") : row[entry] }
                     </td>
                     )
                 )
             }
-            { isActionRequired ? <td></td> : null }
+            <td><i className="fa fa-trash hand-pointer" onClick={()=>onDelete(row.id)}></i></td>
         </tr>
         )): <tr className="m-auto">
             <td>

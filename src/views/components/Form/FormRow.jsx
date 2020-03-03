@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-const FormRow = ({ fieldName="", fieldType="text", fieldId="", placeholder="", onChangeInput }) => {
+const FormRow = ({ fieldName="", fieldType="text", fieldId="", placeholder="", onChangeInput = () =>{}, isFieldValueValid = () =>{} }) => {
 
     const [value, setValue] = useState('');
 
     const onChangeValue = (field, value) => {
-        console.log(`${field} : ${value}`)
-        onChangeInput({[field] : value});
         setValue(value);
+        isFieldValueValid({[field] : !!value});
+        onChangeInput({[field] : value});
     }
 
     return (
