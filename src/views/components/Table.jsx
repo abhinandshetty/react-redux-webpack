@@ -6,7 +6,7 @@ export default class Table extends Component {
     render () {
         const {headers, rows, onClickDeleteUser, isActionRequired} = this.props;
         return (
-                <table className="table table-striped">
+                <table className="table table-responsive table-striped mt-3">
                     <TableHeader headers={headers} isActionRequired={isActionRequired}/>  
                     <TableRow rows={rows} onDelete={onClickDeleteUser}/>
                 </table>    
